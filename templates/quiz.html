@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+{% block body %}
+
+    <div class="container">
+        <div class="header">
+            <img src="/quiz/static/nu_logo.gif" alt="Northeastern University" height="43" width="205"/>
+            <h1>CS 4740/6740 - Network Security</h1>
+        </div>
+
+
+
+<script type=text/javascript>
+  $(function() {
+    var submit_form = function(e) {
+      $.getJSON($SCRIPT_ROOT + '/_validate', {
+
+      quiz_no : {{ quiz_number }},
+      question_number: {{ question_number }},
+      {% for choice in choices%}
+      c{{ loop.index }}: $('#c{{ loop.index }}').is(':checked'),
+      {% endfor %}
+
+      }, function(data) {
+
+            if (data.result.substring(0,1) == '/'){
+
+                          if(confirm("Next Question?")){
+            window.location = data.result;
+            }
+
+            }
+           alert(data.result);
+      });
+      return false;
+    };
+
+    $('#submit').bind('click', submit_form);
+
+    $('input[type=text]').bind('keydown', function(e) {
+      if (e.keyCode == 13) {
+        submit_form(e);
+      }
+    });
+
+    $('input[name=a]').focus();
+  });
+</script>
+
+<h1>{{ quiz_name }}</h1>
+<p>
+    <h2>{{ question_number }}. {{question}}</h2>
+
+    {% for choice in choices%}
+        <input type="checkbox" name="choice" id=c{{ loop.index }} value=c{{ loop.index }}> {{choice}}<br>
+    {% endfor %}
+</br>
+<input id=submit type="submit" value="Submit">
+{% endblock %}
+
