@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block body %}
+		
+    <div class="container">
+        <div class="header">
+            <img src="/quiz/static/nu_logo.gif" alt="Northeastern University" height="43" width="205"/>
+            <h1>CS 4740/6740 - Network Security</h1>
+        </div>
+		
+        <ul class=entries>
+            {% for quiz in quizzes %}
+                <li><h3> <a href={{ quiz.quiz_location }}>{{ quiz.quiz_name }}</a> </h3>
+            {% else %}
+                <li><em>No Quizzes Available</em>
+            {% endfor %}
+        </ul>
+{% endblock %}
