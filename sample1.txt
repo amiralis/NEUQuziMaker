@@ -1,8 +1,8 @@
 #Comment, can be the subject of test
 Q) Questions should start with Q?
-C) Each choice starts with C, each choce can have a feedback
+C) Each choice starts with C, each choice can have a feedback
 FEED) This is a feedback based on your choice.
-ANS) The answer should start with ANS. You can can multiple answers.
+ANS) The answer should start with ANS. You can have multiple answers.
 FEED) Good job!
 C) Choice 2.
 C) Choice 3.
