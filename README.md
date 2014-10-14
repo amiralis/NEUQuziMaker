@@ -6,6 +6,7 @@ Online Quiz Generator
 ![demo image](https://raw.githubusercontent.com/amiralis/NEUQuziMaker/master/static/screenshot.png)
 
 
+
 ## SSL Setup
 
 The app depends on client's SSL certificate for authentication and logging the answers, to generate the clients key and certificate:
@@ -26,3 +27,15 @@ SSLVerifyClient require
 SSLVerifyDepth 2
 SSLOptions +StdEnvVars
 ```
+
+
+## Quiz Sample File
+
+#Comment, can be the subject of test
+Q) Questions should start with Q?
+C) Each choice starts with C, each choice can have a feedback
+FEED) This is a feedback based on your choice.
+ANS) The answer should start with ANS. You can have multiple answers.
+FEED) Good job!
+C) Choice 2.
+C) Choice 3.
