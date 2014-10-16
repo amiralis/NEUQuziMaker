@@ -33,11 +33,11 @@ SSLOptions +StdEnvVars
 ## Quiz Sample File
 
 
-``#``Comment, can be the subject of test
-Q) Questions should start with Q?
-C) Each choice starts with C, each choice can have a feedback
-FEED) This is a feedback based on your choice.
-ANS) The answer should start with ANS. You can have multiple answers.
-FEED) Good job!
-C) Choice 2.
-C) Choice 3.
+\#Comment, can be the subject of test <br>
+Q) Questions should start with Q? <br>
+C) Each choice starts with C, each choice can have a feedback <br>
+FEED) This is a feedback based on your choice. <br>
+ANS) The answer should start with ANS. You can have multiple answers. <br>
+FEED) Good job! <br>
+C) Choice 2. <br>
+C) Choice 3. <br>
