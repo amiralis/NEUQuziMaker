@@ -9,6 +9,7 @@ Online Quiz Generator
 
 ## SSL Setup
 
+
 The app depends on client's SSL certificate for authentication and logging the answers, to generate the clients key and certificate:
 
 ```bash
@@ -31,7 +32,8 @@ SSLOptions +StdEnvVars
 
 ## Quiz Sample File
 
-#Comment, can be the subject of test
+
+``#``Comment, can be the subject of test
 Q) Questions should start with Q?
 C) Each choice starts with C, each choice can have a feedback
 FEED) This is a feedback based on your choice.
